@@ -1,5 +1,6 @@
 FROM python:2.7
 
+ADD ./ /code/
 COPY requirements.txt /tmp
 RUN  ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime  && pip install -r /tmp/requirements.txt 
 WORKDIR /code
